@@ -1,0 +1,211 @@
+@import url(reset.css);
+* {
+  padding: 0;
+  margin: 0; }
+
+html {
+  font-size: 62.5%; }
+
+html, body, .container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+
+.container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  background: #eeeeee; }
+
+.header {
+  width: 100%;
+  height: 44px;
+  background: #373b3e;
+  position: relative; }
+  .header span {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 44px; }
+  .header h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    line-height: 44px; }
+
+.main {
+  -webkit-flex: 1; }
+  .main .top {
+    width: 100%;
+    height: 90px;
+    background: #fff; }
+    .main .top .search {
+      width: 100%;
+      height: 51px;
+      padding: 10px 10px; }
+      .main .top .search span {
+        width: 100%;
+        height: 100%;
+        position: relative; }
+        .main .top .search span b {
+          position: absolute;
+          top: -3px;
+          left: 10px; }
+          .main .top .search span b img {
+            width: 22px;
+            height: 22px; }
+        .main .top .search span input {
+          width: 100%;
+          height: 100%;
+          background: #f1f2f6;
+          padding-left: 47px; }
+        .main .top .search span i {
+          position: absolute;
+          right: 10px;
+          top: -2px; }
+          .main .top .search span i img {
+            width: 18px;
+            height: 20px; }
+    .main .top .nav {
+      width: 100%;
+      height: 40px; }
+      .main .top .nav ul {
+        display: -webkit-flex; }
+        .main .top .nav ul li {
+          -webkit-flex: 1;
+          text-align: center;
+          line-height: 40px;
+          color: #5e656f; }
+        .main .top .nav ul .on {
+          color: #f00;
+          border-bottom: 1px solid #f00; }
+  .main .section {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative; }
+    .main .section ol {
+      position: relative;
+      width: 500%;
+      height: 100%; }
+      .main .section ol li {
+        position: relative;
+        float: left;
+        height: 100%; }
+        .main .section ol li .one {
+          width: 100%;
+          height: 160px;
+          background: #fff;
+          margin: 10px 0; }
+          .main .section ol li .one h3 {
+            width: 100%;
+            height: 20px; }
+            .main .section ol li .one h3 span {
+              line-height: 20px;
+              float: right;
+              color: #f00;
+              padding-right: 10px; }
+          .main .section ol li .one dl {
+            width: 100%;
+            height: 73px;
+            background: #ccc;
+            padding: 5px 10px; }
+            .main .section ol li .one dl dt {
+              float: left;
+              padding-right: 17px; }
+              .main .section ol li .one dl dt img {
+                width: 88px;
+                height: 64px; }
+            .main .section ol li .one dl dd p {
+              width: 100%;
+              height: 20px; }
+              .main .section ol li .one dl dd p b {
+                float: right; }
+          .main .section ol li .one h4 {
+            width: 100%;
+            height: 25px;
+            border-bottom: 1px solid #ccc; }
+            .main .section ol li .one h4 span {
+              float: right;
+              padding-right: 10px;
+              line-height: 25px; }
+          .main .section ol li .one h5 {
+            width: 100%;
+            height: 41px;
+            padding: 10px 0; }
+            .main .section ol li .one h5 input {
+              float: right;
+              width: 85px;
+              height: 24px;
+              background: none;
+              border: 1px solid #ccc;
+              border-radius: 3px;
+              margin-right: 10px; }
+              .main .section ol li .one h5 input:first-child {
+                background: #f00;
+                color: #fff;
+                border: none; }
+
+.mark {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+  opacity: 0.5;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 998; }
+
+.dialog {
+  width: 75%;
+  height: 150px;
+  background: #fff;
+  z-index: 999;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto; }
+  .dialog .title {
+    width: 80%;
+    color: #7d7f7e;
+    margin: 5% auto;
+    font-size: 16px;
+    text-align: center;
+    color: #5c6068;
+    position: absolute;
+    left: 10%;
+    top: 0%; }
+  .dialog h2 {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 20%;
+    color: #7d7f7e; }
+  .dialog span {
+    float: right;
+    font-size: 20px; }
+  .dialog p button {
+    margin: 0 6%;
+    border: 1px solid #e72410;
+    width: 74px;
+    height: 23px;
+    color: #e72410;
+    line-height: .43rem;
+    font-size: .28rem;
+    text-align: center;
+    background: #fff;
+    margin-top: 10%; }
+    .dialog p button:first-child {
+      margin-left: 30px;
+      background: #f00;
+      color: #fff; }
+
+/*# sourceMappingURL=styel.css.map */
