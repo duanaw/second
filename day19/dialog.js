@@ -69,7 +69,7 @@ Dialog.prototype={
             this.callback = callback
         }
         if(msg){
-            this.msg = msg
+            this.msg = index;
         }
         this.show();
     }
