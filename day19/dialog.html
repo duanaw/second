@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none; }
+
+        body, html {
+            width: 100%;
+            height: 100%; }
+
+        .wrap {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            -webkit-flex-direction: column;
+            background-size: cover;
+            position: relative; }
+
+        .mark {
+            width: 100%;
+            height: 100%;
+            background: #000;
+            opacity: 0.5;
+            position: absolute;
+            top: 0;
+            left: 0; }
+
+        .marktext {
+            width: 70%;
+            border: 5px solid #fae639;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate3d(-50%,-50%,0);
+            background: #000;
+            padding: 10px;
+        }
+        .marktext span {
+            position: absolute;
+            color: #fff;
+            top: 3px;
+            right: 3px; }
+        .marktext p:nth-of-type(1) {
+            font-size: 14px;
+            color: #f9e439;
+            line-height: 30px;
+            margin-left: 26%;
+            margin-top: 20px; }
+        .marktext p:nth-of-type(2) {
+            color: #fff;
+            line-height: 35px;
+            margin-left: 26%; }
+        .marktext p:nth-of-type(3) {
+            width: 40%;
+            height: 20px;
+            border: 2px solid #f9e439;
+            border-radius: 4px;
+            text-align: center;
+            line-height: 20px;
+            margin-left: 26%;
+            color: #f9e439; }
+
+        .hide {
+            display: none; }
+
+
+        .mask-layer{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            background: #000;
+            display: none;
+            transition: opacity 0.3s ease-out;
+        }
+        .mask-show{
+            display: block;
+        }
+        .dialog{
+            width: 90%;
+            display: none;
+            /*min-height: 200px;*/
+            position: absolute;
+            left: 50%;
+            top: 50%;
+
+            border-radius: 5px;
+            z-index: 1;
+            -webkit-transform: translate3d(-50%,-50%,0);
+            -moz-transform: translate3d(-50%,-50%,0);
+            -ms-transform: translate3d(-50%,-50%,0);
+            -o-transform: translate3d(-50%,-50%,0);
+            transform: translate3d(-50%,-50%,0);
+        }
+        .dialog-active{
+            display: block !important;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+
+    <!--<div class="mark"></div>-->
+    <!--<div class="marktext">
+        <span>X</span>
+        <p>成功获取优惠</p>
+        <p>稍后……稍后……稍后……稍后……稍后……稍后……稍后……稍后……稍后……稍后……稍后……稍后……稍后……</p>
+        <p>确定</p>
+    </div>-->
+    <button>确定</button>
+</div>
+
+<script src="dialog.js"></script>
+<script>
+    'use strict';
+    var dialog = new Dialog({
+        title:'成功获取优惠',
+        tpl:'<div class="marktext"> <span>X</span> <p>成功获取优惠</p> <p>稍后……稍后……稍后……稍后……稍后……稍后……稍后……稍后……稍后……稍后……稍后……稍后……稍后……</p><p class="cancel">取消</p> <p class="ok">确定</p></div>'
+    });
+
+
+    document.querySelector('button').onclick=function () {
+        dialog.confirm('',function () {
+            console.log('你点击了确定')
+        })
+    };
+
+
+    var addCount;
+
+    function s1() {
+        var count = 0;
+        addCount = function() {
+            count++;
+        };
+
+        function s12() {
+            console.log(count)
+        }
+        return s12
+    }
+    var result1 = s1();
+    var result2 = s1();
+    var result5 = s1();
+
+    addCount();
+    result1();
+    result2();
+    addCount();
+    result5();
+
+</script>
+</body>
+</html>
