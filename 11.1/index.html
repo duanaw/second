@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<ul>
+		<li>北京八维研究学院,传媒学院1411bB班</li>
+		<li>北京八维研究学院,云计算学院1411bB班</li>
+		<li>北京八维研究学院,游戏学院1学院411bB班</li>
+		<li>北京八维研究学院,软工学院1411bB班</li>
+		<li>北京八维研究学院,网络营销学院1411bB班</li>
+	</ul>
+	<p><img src="img/1 (4).png" alt=""></p>
+	<div id="box"></div>
+	<script>
+	
+	setInterval(function(){
+		var box=document.getElementById("box")
+		var times=new Date()
+		var year=times.getFullYear()
+		var month=times.getMonth()+1
+		var day=times.getDate()
+		var hours=times.getHours()
+		var minutes=times.getMinutes()+1
+		var seconds=times.getSeconds()+1
+		if(minutes<10){
+
+			 minutes="0"+minutes
+		}
+		if(seconds<10){
+
+			seconds="0"+seconds
+		}
+		box.innerHTML="现在是:"+year+"/"+month+"/"+day+" "+hours+":"+minutes+":"+seconds
+
+	},1000)
+	
+	</script>
+</body>
+</html>
